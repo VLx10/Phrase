@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
+phrase=input("Inscrivez une phrase :")
+liste=phrase.split()
+motlong=0
+for mot in liste:
+	taille = len(mot)
+	if taille > motlong:
+		motlong=taille
+print(motlong)
