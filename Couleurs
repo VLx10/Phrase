@@ -1,0 +1,14 @@
+#!/usr/bin/env python;
+# -*- coding: utf-8 -*-
+
+from PIL import Image;
+img = Image.open("index.png");
+pixel = img.load();
+largeur = img.size[0];
+hauteur = img.size[1];
+for i in range(largeur):
+	for j in range(hauteur):
+		rouge,vert,bleu = pixel[i,j]
+		pixel[i,j] = (bleu,0,0);		
+		
+img.show();
